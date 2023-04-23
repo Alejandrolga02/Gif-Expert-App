@@ -15,7 +15,8 @@ input {
 	font-size: 1.2rem;
 	outline: none;
 	padding: 10px 15px;
-	width: 100%;
+	width: calc(100% - 30px);
+	max-width: 900px;
 }
 
 h2 {
@@ -60,4 +61,21 @@ h3 {
 
 .card img {
 	width: 100%;
+}
+
+.btn-search {
+	display: block;
+	margin: 20px auto;
+	padding: 20px 40px;
+	max-width: 200px;
+	border-radius: 10px;
+	background-color: #202020;
+	color: #fff;
+	font-weight: 700;
+	font-family: Helvetica, Arial, sans-serif;
+	cursor: pointer;
+}
+
+.btn-search:hover {
+	background-color: #333333;
 }
