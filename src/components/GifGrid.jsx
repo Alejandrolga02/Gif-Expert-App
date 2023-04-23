@@ -3,14 +3,21 @@ import PropTypes from "prop-types";
 import { GifItem } from "./";
 import { useFetchGifs } from "../hooks";
 
-export const GifGrid = ({ category }) => {
+export const GifGrid = ({ category, deleteCategory }) => {
 	const { images, isLoading } = useFetchGifs(category);
 
-	console.log(isLoading);
+	const onDeleteCategory = () => {
+		deleteCategory(category);
+	};
 
 	return (
 		<>
-			<h3>{category}</h3>
+			<div className="heading-container">
+				<h3>{category}</h3>
+				<button onClick={onDeleteCategory} className="btn-delete">
+					Delete
+				</button>
+			</div>
 			<div className="card-grid">
 				{isLoading && <h2>Cargando...</h2>}
 				{images.map((image) => (
@@ -23,4 +30,5 @@ export const GifGrid = ({ category }) => {
 
 GifGrid.propTypes = {
 	category: PropTypes.string.isRequired,
+	deleteCategory: PropTypes.func.isRequired,
 };

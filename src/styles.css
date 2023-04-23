@@ -79,3 +79,34 @@ h3 {
 .btn-search:hover {
 	background-color: #333333;
 }
+
+.btn-delete {
+	display: block;
+	padding: 10px;
+	margin: 20px 0px;
+	padding: 20px 40px;
+	max-width: 200px;
+	border-radius: 10px;
+	background-color: #bd2121;
+	color: #fff;
+	font-weight: 700;
+	font-size: 1rem;
+	font-family: Helvetica, Arial, sans-serif;
+	cursor: pointer;
+}
+
+.btn-delete:hover {
+	background-color: #9e0e0e;
+}
+
+.heading-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: center;
+	gap: 20px;
+}
+
+.heading-container > h3 {
+	margin: 0;
+}
