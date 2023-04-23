@@ -18,9 +18,9 @@ export const AddCategory = ({ onNewCategory }) => {
 	};
 
 	return (
-		<form onSubmit={onSubmit}>
-			<input type="text" placeholder="Search Gifs" value={inputValue} onChange={onInputChange} />
-			<button type="submit" className="btn-search">
+		<form onSubmit={onSubmit} aria-label="form">
+			<input type="text" aria-label="input" placeholder="Search Gifs" value={inputValue} onChange={onInputChange} />
+			<button type="submit" aria-label="button" className="btn-search">
 				Search GIFs
 			</button>
 		</form>
