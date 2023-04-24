@@ -54,8 +54,6 @@ describe("tests in AddCategory", () => {
 		});
 		fireEvent.submit(form);
 
-		screen.debug();
-
 		expect(input.value).toBe(wrongInput);
 		expect(onNewCategory).not.toHaveBeenCalled();
 	});
