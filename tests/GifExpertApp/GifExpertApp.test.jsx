@@ -33,6 +33,25 @@ describe("tests in <GifExpertApp/>", () => {
 
 		const headingsElements = screen.getAllByRole("heading", {level:3})
 		expect(headingsElements.length).toBe(2);
+	});
+
+	test("onAddCategory should not create a category if exists", () => {
+		const newCategory = "One Punch";
+
+		render(<GifExpertApp />);
+
+		const inputElement = screen.getByRole("textbox", { name: "input" });
+		const formElement = screen.getByRole('form');
+
+		fireEvent.change(inputElement, {
+			target: {
+				value: newCategory,
+			},
+		});
+		fireEvent.submit(formElement);
+
+		const headingsElements = screen.getAllByRole("heading", {level:3})
+		expect(headingsElements.length).toBe(1);
 
 		screen.debug();
 	});
