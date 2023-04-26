@@ -14,7 +14,7 @@ export const GifGrid = ({ category, deleteCategory }) => {
 		<>
 			<div className="heading-container">
 				<h3>{category}</h3>
-				<button onClick={onDeleteCategory} className="btn-delete">
+				<button aria-label="btn-delete" onClick={onDeleteCategory} className="btn-delete">
 					Delete
 				</button>
 			</div>
